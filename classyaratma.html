@@ -1,0 +1,51 @@
+Javascript
+<html>
+</html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript">
+function takim(ad,soyad,takim) {//işte takim adlı sınıfım
+this.ad=ad;
+this.soyad=soyad;
+this.takim=takim;
+}
+var nesne=new takim("Onur","Anli","GALATASARAY");//sınıfı kullanmak için nesne oluşturmalıyız.
+document.write(nesne.ad);
+document.write("<hr/>");
+document.write(nesne.takim);
+document.write("<hr/>");
+var nesne2 = new takim("XxX","yYy","TtT");//gördüğün gibi farkı bir nesne oluşturup aynı classı kullandık.
+document.write(nesne2.ad);
+document.write("<hr/>");
+//var ülke=(isim:"Almanya",dil:"Almanca",Bölge:"Avrupa");
+//document.write(ülke.isim);
+/*Bu kolaylıkla nesne oluşturmamıza yarar.Fakat her seferinde isim dil Bölge tekrar
+tekrar yazılmak zorunda.Bundan dolayı uzun uzadıya sınıfını yarat ve nesnelerini oluştur*/
+document.write("<h3>Daha Karışık Bir Örnek</h3><hr/>");
+function ders(ad,numara,derslik,tarih){
+this.ad=ad;
+this.numara=numara;
+this.derslik=derslik;
+this.tarih=tarih;
+this.kacsene=kacsene;//Bu sınıftan olan bir nesnenin bu fonksiyonu kullanabilmesi için yapmak şart.
+}
+function kacsene(){
+var hesap=2014-this.tarih;//this tarih dedim çünkü her oluşturduğum nesne farklı tarih yollar hepsi için ayrı alır böylece. 
+return hesap;
+}
+var obje1=new ders("Türkçe",25,101,2010);//yeni bir nesnem var artık..
+var obje2=new ders("Matematik",30,100,2002);//Gözümüz doymadı 2. bir nesne..
+document.write(obje1.ad);
+document.write("<hr/>");
+document.write(obje1.kacsene());//fonsıyon oldugu için obje1.kacsene gibi bir hataya düşme! obje1.kacsene()-->True
+document.write("<hr/>");
+document.write(obje2.kacsene());
+
+
+
+
+</script>
+</head>
+<body>
+</body>
+==========
