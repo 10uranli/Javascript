@@ -1,0 +1,42 @@
+<html>
+<head>
+<script type="text/javascript">
+var x = 1;
+switch(x){
+case 1:{document.write("ben birim<hr/>");}
+case 2:{document.write("ben ikiyim<hr/>");}
+case 3:{document.write("ben üçüm<hr/>");}
+}
+document.write("Neden böyle oldu?Şimdide break ile mi denesek?<hr/><br/>");
+
+switch(x){
+case 1:{document.write("ben birim<hr/>");break;}
+case 2:{document.write("ben ikiyim<hr/>");break;}
+case 3:{document.write("ben üçüm<hr/>");break;}
+}
+document.write("<h4>FOR KULLANIMI</h4><br/>");
+for(var i =0;i<=10;i++){
+document.write(i+"<br/>");
+
+}
+document.write("<br/><h4>HADİ SIRA WHİLE GEÇSİN</h4>");
+document.write("Aynısını while yapalım<br/>");
+var y=0;
+while(y<=10){
+document.write(y+"<br/>");
+y++;
+}
+document.write("<br/><h4>HADİ SIRA DO-WHİLE GEÇSİN</h4>")
+var a=0;
+do{
+document.write(a+"<br/>");
+a++;
+}while(a<=10)
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>
