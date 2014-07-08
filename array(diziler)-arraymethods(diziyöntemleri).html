@@ -1,0 +1,49 @@
+<html>
+</html>
+<head>
+<meta type=utf-8/>
+<script type="text/javascript">
+var dizi = new Array("A","B",5);//Dizi oluşturma yöntemi 1.
+document.write(dizi[0]);
+document.write(dizi[1]);
+document.write(dizi[2]);
+var dizi2=new Array();//Dizi oluştyrma yöntem 2.
+dizi2[0]="a";
+dizi2[1]="b";
+document.write("<hr/>");//Ara çizgi
+document.write(dizi2[0]);
+document.write(dizi2[1]);
+document.write("<hr/>")
+var dizi3=("f");//Dizi oluşturma yöntem 3.
+document.write(dizi3[0]);
+document.write("<h3>Dizi Yetenekleri Nelerdir?</h3>")
+document.write("<hr/>");
+document.write(dizi.length);//Dizi uzunluğu hesaplama
+document.write("<hr/>");
+var birlesik = new Array()
+birlesik = dizi.concat(dizi2);//2 diziyi birbirine ekleme
+document.write(birlesik);
+document.write("<hr/>");
+document.write(dizi2.concat(dizi3));
+document.write("<hr/>");
+document.write(dizi.join(""));//join metotu ile çeşitli şeyler yapılabilir.İki tırnak arası eleman arasının nasıl olacağını belirtir çeşitli örneklerle inceleyelim.
+document.write("<br/>");
+document.write(dizi.join(" "));
+document.write("<br/>");
+document.write(dizi.join("!!!"));
+document.write("<hr/>");
+document.write(dizi.reverse());//Diziyi ters çevirir.
+document.write("<hr/>");
+document.write(dizi.sort());//Eleman sıralar.
+document.write("<br/>"+dizi);//Artık dizim sıralı halde.
+document.write("<hr/>");
+document.write(dizi.pop());//Dizinin son elemanını çeker.Şuan document.write metotu ile çekilen elemanı yazdırdım.Zorunlu değil.
+document.write("<br/>"+dizi);
+document.write("<hr/>");
+dizi.push("Yeni Elemanim");//Dizi sonuna yeni eleman ekler.
+document.write("<br/>"+dizi);
+
+</script>
+</head>
+<body>
+</body>
