@@ -1,0 +1,49 @@
+<html>
+</html>
+<head>
+<meta charset="utf-8"
+<script type="text/javascript">
+var dizi = new Array();
+dizi[0]=Math.round(5.88);//round sayıyı en yakın olduğu tamsayıya yuvarlar.
+dizi[1]=Math.round(5.22);
+dizi[2]=Math.floor(9.99);//alt değere yuvarlar
+dizi[3]=Math.sqrt(16);//Karakök
+dizi[4]=Math.max(5.88,7,5,78);//verllenle arasındaki en büyük sayı
+dizi[5]=Math.min(5.88,1,75,789);//verllenle arasındaki en küçük sayı
+dizi[6]=Math.PI;//pi sabiti
+dizi[7]=Math.E;// e sabiti
+dizi[8]=Math.random();//her seferinde rasgele 0 ile 1 arası değer döndürür
+for(var i = 0; i<dizi.length;i++){
+document.write(+dizi[i]+"<hr/>");
+}
+document.write("<hr/>"+"<h3>Şimdi Zamanla Oynama Vakti</h3>");
+var zaman = new Date();//zaman adındaki değişken şuankı saatı tutuyor.
+document.write(zaman);
+var saat = zaman.getHours();//get almadır.getHours ile sadece zamanı saat değişkenine atıyoruz.
+document.write("<hr/>"+saat);
+var dakika = zaman.getMinutes();//sadece dakika
+document.write("<hr/>"+dakika);
+var zamanDegis = new Date(2012,0,15,22,59,59,10);//Zamanı değişmek mümkün.Büyükten küçüğe yıl,ay,gün,saat,dakika,saniye.Not = "0"ocaktır mesela.Bunun gibi istisnaları araştır.
+document.write("Zaman değişti = "+"<hr/>"+zamanDegis);
+document.write("<hr/>"+zaman);
+zaman.setHours(23); //set güncellemedir.Sadece saati günceller.
+document.write("<hr/>"+"sadece saat değişti "+zaman);
+var tarih = zaman.getFullYear();
+document.write("<hr/>"+tarih);
+//Örnek
+function yasKontrol(){
+var dogumYili = prompt("Lütden dogum yilinizi giriniz");
+var simdikiZaman = new Date();
+var sinir = simdikiZaman.getFullYear()-18;
+if(dogumYili>sinir)
+{alert("Küçüksün dostum çık dışarı!");}
+else
+{alert("Seni gidi koca adam hoşgeldin!");}
+}
+yasKontrol();
+
+
+</script>
+</head>
+<body>
+</body>
