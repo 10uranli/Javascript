@@ -42,7 +42,13 @@ document.write("<br/>"+dizi);
 document.write("<hr/>");
 dizi.push("Yeni Elemanim");//Dizi sonuna yeni eleman ekler.
 document.write("<br/>"+dizi);
-
+document.write("<hr/>");
+document.write("<h2>prompt önemli inceleyelim</h2>");
+var deneme = new Array();
+for (var i = 0;i<5;i++){
+deneme[i]=prompt("Lütfen"+(i+1)+". elemanı giriniz");//Dışarıdan girdi almamızı sağlar.Burada dizi elemanlarını tek tek prompt ile alıyoruz.
+}
+document.write(deneme);
 </script>
 </head>
 <body>
