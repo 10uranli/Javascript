@@ -1,0 +1,52 @@
+<html>
+</html>
+<head>
+<meta charset="utf-8"> 
+<style type ="text/css">
+fieldset{background-color:#9370db;
+}
+span{
+font-style:italic;
+font-weight:bold;
+color:#ff3030;
+font-size:20;
+}
+</style>
+
+</head>
+<body>
+<!--İşin html kısmı-->
+   <form name="Giriş_Bilgisi">
+   <fieldset ><legend><span>Giriş Alanı<span></legend> <!--Görsellik katar şart değil!-->
+      <b>Kullanıcı Adı:</b><br/>
+	  <input type="text" name="isim" value="İsim"size="12"><br />
+	  <b>Şifre:</b><br/>
+      <input type="password" name="sifre" value="Şifre" size="12"><br /><br />
+      <input type="submit" name="gonder" value="Giriş">
+	  <input type="submit" name="Kayıt" value="Kayıt Ol"><br /><br />
+   </fieldset>
+   </form>
+<form name = "takim"><h4>HangiTakımlısın?</h4>
+<input type="radio" name="takim" value="A">Galatasaray<br/>
+<input type="radio" name="takim" value="B">Fenerbahçe<br/>
+<input type="radio" name="takim" value="C">Beşiktaş<br/>
+<input type="radio" name="takim" value="D">Karsspor<br/>
+</form>
+<h2>Gelelim js ile bağlantısına</h2><br/>
+<script type="text/javascript">
+var x = document.forms[0].length;/*formlar name="Giriş_Bilgisi" ve name = "takim" olmak üzere 2 tanedir.Bu ikisini forms gibi bir listede bilgisayar tutar
+									forms[0] demek name="Giriş_Bilgisi" forms[1] ise name = "takim" yi tutat*/
+document.write("name='Giriş_Bilgisi' olanın eleman sayisi="+x);/*o forma özgü yetenekler elemanlardır.Örneğin giriş bilgisinin elemanları 4 tane input 1 tanede fieldsettir.*/
+var y = document.forms[1].length;
+document.write("<hr/>")
+document.write("name='takim' olanın eleman sayisi="+y)/*bunun elemanları 4 tane inputtur.h4 elemanı değildir nedeni ise h1,h2,vs forma özgü özellükler değildir. */
+var z = document.Giriş_Bilgisi.length;
+document.write("<hr/>yeni bir yol = "+z);//forms[0] vs yerine nameleri kullanmak mümkün.
+var d = document.takim.elements[0].value;//Burda takimin ilk elemanı Galatasaraydır.Onun valueside A dır.
+document.write("<hr/>"+d);
+var k = document.takim.elements[1].value;
+document.write("<hr/>"+k);
+var j = document.Giriş_Bilgisi.elements[1].name;//Giriş_Bilgisinin 2. elemanı password tür onun name Şifredir.Mesela .type ile text e ulaşılabilir.
+document.write("<hr/>"+j);
+</script>
+ </body>
